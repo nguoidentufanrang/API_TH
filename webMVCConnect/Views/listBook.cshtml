@@ -1,0 +1,48 @@
+﻿@model webMVCConnect.Models.DTO.BookDTO
+
+<h1>Thông tin sách:</h1>
+
+<img src="@Model.CoverUrl" style="float:left; width:200px; margin-right:10px;" />
+<p><strong>Tên sách:</strong> @Model.Title</p>
+<p><strong>Mô tả:</strong> @Model.Description</p>
+<p><strong>Ngày đọc:</strong> @Model.DateRead</p>
+
+<p><strong>Is Read?</strong></p>
+@if (Model.IsRead == true)
+{
+    <input type="radio" id="isRead" name="isRead" value="Yes" checked />
+    <label for="isRead">Read</label>
+    <input type="radio" id="notRead" name="isRead" value="No" />
+    <label for="notRead">Not Read</label>
+}
+else
+{
+    <input type="radio" id="isRead" name="isRead" value="Yes" />
+    <label for="isRead">Read</label>
+    <input type="radio" id="notRead" name="isRead" value="No" checked />
+    <label for="notRead">Not Read</label>
+}
+
+<p><strong>Review:</strong></p>
+@if (Model.IsRead == true)
+{
+    @for (var i = 0; i < Model.Rate; i++)
+    {
+        <span class="glyphicon glyphicon-star"></span>
+    }
+}
+else
+{
+    <span>Not yet read</span>
+}
+
+<p><strong>Thể loại:</strong> @Model.Genre</p>
+<p><strong>Date added:</strong> @Model.DateAdded</p>
+<p><strong>Nhà xuất bản:</strong> @Model.PublisherName</p>
+<p><strong>Tác giả:</strong></p>
+<ul>
+    @foreach (var author in Model.AuthorNames)
+    {
+        <li><a href="#linktacgia">@author</a></li>
+    }
+</ul>

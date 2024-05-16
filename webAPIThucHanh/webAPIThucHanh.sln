@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webAPIThucHanh", "webAPIThucHanh.csproj", "{D3934AF3-8829-4845-BB1B-830A8251E783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webMVCConnect", "..\webMVCConnect\webMVCConnect.csproj", "{EFAB08EA-A964-43C4-A5AB-ED9B97048568}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3934AF3-8829-4845-BB1B-830A8251E783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3934AF3-8829-4845-BB1B-830A8251E783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3934AF3-8829-4845-BB1B-830A8251E783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3934AF3-8829-4845-BB1B-830A8251E783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFAB08EA-A964-43C4-A5AB-ED9B97048568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAB08EA-A964-43C4-A5AB-ED9B97048568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAB08EA-A964-43C4-A5AB-ED9B97048568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAB08EA-A964-43C4-A5AB-ED9B97048568}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8237DB84-0D2B-45D9-998F-413103029CF1}
+	EndGlobalSection
+EndGlobal

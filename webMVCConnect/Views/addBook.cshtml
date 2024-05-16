@@ -1,0 +1,108 @@
+﻿@model webMVCConnect.Models.DTO.AddBookDTO
+
+@{
+    var listAuthor = ViewBag.listAuthor as List<webMVCConnect.Models.DTO.AuthorDTO>;
+    var listPublisher = ViewBag.listPublisher as List<webMVCConnect.Models.DTO.PublisherDTO>;
+}
+
+<form asp-controller="Books" asp-action="AddBook" method="POST">
+    <label>Title</label>
+    <input type="text" name="Title" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span><br />
+
+    <label>Description</label>
+    <input type="text" name="Description" asp-for="Description" class="form-control" /><br />
+
+    <label>Is Read</label>
+    <input type="radio" id="isReadTrue" name="IsRead" value="True" asp-for="IsRead" />
+    <label for="isReadTrue">Yes</label>
+    <input type="radio" id="isReadFalse" name="IsRead" value="False" asp-for="IsRead" />
+    <label for="isReadFalse">No</label><br />
+
+    <label>Date Read</label>
+    <input type="date" name="DateRead" asp-for="DateRead" class="form-control" /><br />
+
+    <label>Rate</label>
+    <input type="number" name="Rate" asp-for="Rate" class="form-control" /><br />
+
+    <label>Genre</label>
+    <input type="text" name="Genre" asp-for="Genre" class="form-control" /><br />
+
+    <label>Cover Url</label>
+    <input type="text" name="CoverUrl" asp-for="CoverUrl" class="form-control" /><br />
+
+    <label>Date Added</label>
+    <input type="date" name="DateAdded" asp-for="DateAdded" class="form-control" /><br />
+
+    <label>Publisher</label>
+    <select name="PublisherID" asp-for="PublisherID" class="form-control">
+        @foreach (var item in listPublisher)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }@model webMVCConnect.Models.DTO.AddBookDTO
+
+@{
+    var listAuthor = ViewData["listAuthor"] as List<webMVCConnect.Models.DTO.AuthorDTO>;
+    var listPublisher = ViewData["listPublisher"] as List<webMVCConnect.Models.DTO.PublisherDTO>;
+}
+
+<form asp-controller="Books" asp-action="AddBook" method="POST">
+    <label>Title</label>
+    <input type="text" name="Title" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span><br />
+
+    <label>Description</label>
+    <input type="text" name="Description" asp-for="Description" class="form-control" /><br />
+
+    <label>Is Read</label>
+    <input type="radio" id="isReadTrue" name="IsRead" value="True" asp-for="IsRead" />
+    <label for="isReadTrue">Yes</label>
+    <input type="radio" id="isReadFalse" name="IsRead" value="False" asp-for="IsRead" />
+    <label for="isReadFalse">No</label><br />
+
+    <label>Date Read</label>
+    <input type="date" name="DateRead" asp-for="DateRead" class="form-control" /><br />
+
+    <label>Rate</label>
+    <input type="number" name="Rate" asp-for="Rate" class="form-control" /><br />
+
+    <label>Genre</label>
+    <input type="text" name="Genre" asp-for="Genre" class="form-control" /><br />
+
+    <label>Cover Url</label>
+    <input type="text" name="CoverUrl" asp-for="CoverUrl" class="form-control" /><br />
+
+    <label>Date Added</label>
+    <input type="date" name="DateAdded" asp-for="DateAdded" class="form-control" /><br />
+
+    <label>Publisher</label>
+    <select name="PublisherID" asp-for="PublisherID" class="form-control">
+        @foreach (var item in listPublisher)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select><br />
+
+    <label>Author</label>
+    <select name="AuthorIds" asp-for="AuthorIds" multiple class="form-control">
+        @foreach (var item in listAuthor)
+        {
+            <option value="@item.Id">@item.FullName</option>
+        }
+    </select><br />
+
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+    </select><br />
+
+    <label>Author</label>
+    <select name="AuthorIds" asp-for="AuthorIds" multiple class="form-control">
+        @foreach (var item in listAuthor)
+        {
+            <option value="@item.Id">@item.FullName</option>
+        }
+    </select><br />
+
+    <input type="submit" class="btn btn-primary" />
+</form>
